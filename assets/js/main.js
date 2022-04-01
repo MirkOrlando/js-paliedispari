@@ -100,7 +100,7 @@ formGameElement.addEventListener("submit", function (event) {
 
 formGameElement.addEventListener("reset", function (event) {
   const userChoice = document.getElementById("even_or_odd");
-  const userNumber = parseInt(document.getElementById("user_number"));
+  const userNumber = document.getElementById("user_number");
   const readResultGameElement = document.querySelector(".game div.read_result");
   event.preventDefault();
   userNumber.value = "";
