@@ -36,18 +36,35 @@ Dichiariamo chi ha vinto.
  */
 
 /* L’utente sceglie pari o dispari */
-const userChoice = "pari";
+const userChoice = prompt('Scegli: "pari" o "dipari"?');
+let userChoiceEven = false;
+if (userChoice.toLowerCase() === "pari") {
+  userChoiceEven = true;
+} else if (userChoice.toLowerCase() === "dispari") {
+  userChoiceEven = false;
+} else {
+  alert('Cortesemente digitare "pari" o "dispari"');
+}
 /* e inserisce un numero da 1 a 5. */
-const userNumber = 2;
-/* Generiamo un numero random (sempre da 1 a 5) per il computer. */
-const pcNumber = 2; //getRndInteger(1, 5);
+const userNumber = parseInt(prompt("Digita un numero da 1 a 5"));
+/* Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). */
+const pcNumber = getRndInteger(1, 5);
 /* Sommiamo i due numeri */
 const sum = userNumber + pcNumber;
-/* Stabiliamo se la somma dei due numeri è pari o dispari */
-if (isEven(sum)) {
-  console.log("è pari");
-} else {
-  console.log("è dispari");
+/* Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione). */
+const result = isEven(sum);
+
+console.log(userChoice, userNumber, pcNumber, sum);
+
+/* Dichiariamo chi ha vinto. */
+switch (result) {
+  case userChoiceEven:
+    console.log("User wins");
+    break;
+
+  default:
+    console.log("PC wins");
+    break;
 }
 
 /**
