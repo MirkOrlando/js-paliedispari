@@ -14,6 +14,12 @@
   <body>
     <section class="palindrome">
         <h2><span class="text-uppercase">è</span> Palindroma?</h2>
+        <form action="" method="post">
+            <input type="text" name="text" id="text" placeholder="Type a something" required>
+            <button type="submit" class="submit">Elabora</button>
+            <button type="reset" class="reset">Pulisci</button>
+        </form>
+        <div class="read_result"></div>
     </section>
 
     <section class="game">
@@ -25,8 +31,8 @@
                 <option value="default" selected>Pari o Dispari?</option>
             </select>
             <input type="number" name="user_number" id="user_number" required>
-            <button type="submit" id="submit">Gioca</button>
-            <button type="reset" id="reset">Pulisci</button>
+            <button type="submit" class="submit">Gioca</button>
+            <button type="reset" class="reset">Pulisci</button>
         </form>
         <div class="read_result"></div>
     </section>
