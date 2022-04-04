@@ -38,10 +38,10 @@ formPalindromeElement.addEventListener("reset", function (event) {
  * @param {string} word A string value
  * @returns {boolean}
  */
-function isPalindrome(string) {
-  const reversed = string.split("").reverse().join("");
+function isPalindrome(word) {
+  const reversed = word.split("").reverse().join("");
   console.log(reversed);
-  if (string.toUpperCase() === reversed.toUpperCase()) {
+  if (word.toUpperCase() === reversed.toUpperCase()) {
     return true;
   } else {
     return false;
@@ -84,7 +84,7 @@ formGameElement.addEventListener("submit", function (event) {
   if (userChoice === "default") {
     readResultGameElement.innerHTML = `Prima è necessario scegliere pari o dispari!`;
   } else if (userNumber < 1 || userNumber > 5) {
-    readResultGameElement.innerHTML = `Selezionare un numero compreso tra 1 e 5!`;
+    readResultGameElement.innerHTML = `Inserire un numero compreso tra 1 e 5!`;
   } else {
     switch (result) {
       case userChoiceEven:
@@ -125,7 +125,7 @@ function isEven(number) {
  *
  * Generate a random number value included
  * between the minimum and maximum
- * values indicated in the parameters.
+ * values indicated in the params.
  * This function includes the extremes.
  * @param {number} min A number value that indicates the minimum value
  * @param {number} max A number value that indicates the maximum value
